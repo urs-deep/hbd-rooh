@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#120b2b"
+    >
+
+    <title>For My Rooh ❤️</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+        }
+
+        body {
+            min-height: 100vh;
+            overflow-x: hidden;
+
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+
+            color: #ffffff;
+
+            background:
+                radial-gradient(
+                    circle at 20% 20%,
+                    #3b185f 0%,
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at 80% 80%,
+                    #5b174f 0%,
+                    transparent 35%
+                ),
+                linear-gradient(
+                    135deg,
+                    #090615,
+                    #140b2d,
+                    #210d2c,
+                    #090615
+                );
+
+            position: relative;
+        }
+
+
+        /* =========================
+           BACKGROUND GLOWING CIRCLES
+        ========================== */
+
+        .glow {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(55px);
+            opacity: 0.35;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .glow.one {
+            width: 180px;
+            height: 180px;
+            background: #ff4fa3;
+            top: 5%;
+            left: -70px;
+            animation: glowMove1 8s ease-in-out infinite alternate;
+        }
+
+        .glow.two {
+            width: 220px;
+            height: 220px;
+            background: #704cff;
+            right: -90px;
+            top: 40%;
+            animation: glowMove2 10s ease-in-out infinite alternate;
+        }
+
+        .glow.three {
+            width: 170px;
+            height: 170px;
+            background: #ff7ac8;
+            bottom: 5%;
+            left: 15%;
+            animation: glowMove3 9s ease-in-out infinite alternate;
+        }
+
+        @keyframes glowMove1 {
+            from {
+                transform: translate(0, 0);
+            }
+
+            to {
+                transform: translate(45px, 70px);
+            }
+        }
+
+        @keyframes glowMove2 {
+            from {
+                transform: translate(0, 0);
+            }
+
+            to {
+                transform: translate(-50px, -40px);
+            }
+        }
+
+        @keyframes glowMove3 {
+            from {
+                transform: translate(0, 0);
+            }
+
+            to {
+                transform: translate(50px, -30px);
+            }
+        }
+
+
+        /* =========================
+           STARS
+        ========================== */
+
+        .stars,
+        .stars::before,
+        .stars::after {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+        }
+
+        .stars {
+            z-index: 1;
+
+            background-image:
+                radial-gradient(
+                    2px 2px at 10% 20%,
+                    rgba(255,255,255,0.9),
+                    transparent
+                ),
+                radial-gradient(
+                    1px 1px at 25% 70%,
+                    rgba(255,255,255,0.8),
+                    transparent
+                ),
+                radial-gradient(
+                    2px 2px at 45% 30%,
+                    rgba(255,255,255,0.8),
+                    transparent
+                ),
+                radial-gradient(
+                    1px 1px at 65% 15%,
+                    rgba(255,255,255,0.9),
+                    transparent
+                ),
+                radial-gradient(
+                    2px 2px at 85% 35%,
+                    rgba(255,255,255,0.8),
+                    transparent
+                ),
+                radial-gradient(
+                    1px 1px at 75% 75%,
+                    rgba(255,255,255,0.8),
+                    transparent
+                ),
+                radial-gradient(
+                    2px 2px at 35% 90%,
+                    rgba(255,255,255,0.8),
+                    transparent
+                );
+
+            animation: twinkle 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes twinkle {
+            from {
+                opacity: 0.45;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+
+        /* =========================
+           FLOATING HEARTS
+        ========================== */
+
+        .heart {
+            position: fixed;
+            bottom: -30px;
+            z-index: 2;
+
+            font-size: 18px;
+            opacity: 0;
+
+            pointer-events: none;
+
+            animation: floatHeart linear infinite;
+        }
+
+        .heart:nth-child(1) {
+            left: 10%;
+            animation-duration: 9s;
+            animation-delay: 1s;
+        }
+
+        .heart:nth-child(2) {
+            left: 30%;
+            animation-duration: 12s;
+            animation-delay: 4s;
+        }
+
+        .heart:nth-child(3) {
+            left: 55%;
+            animation-duration: 10s;
+            animation-delay: 2s;
+        }
+
+        .heart:nth-child(4) {
+            left: 78%;
+            animation-duration: 13s;
+            animation-delay: 5s;
+        }
+
+        .heart:nth-child(5) {
+            left: 90%;
+            animation-duration: 11s;
+            animation-delay: 7s;
+        }
+
+        @keyframes floatHeart {
+            0% {
+                transform:
+                    translateY(0)
+                    rotate(0deg)
+                    scale(0.7);
+
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 0.7;
+            }
+
+            80% {
+                opacity: 0.5;
+            }
+
+            100% {
+                transform:
+                    translateY(-115vh)
+                    rotate(25deg)
+                    scale(1.2);
+
+                opacity: 0;
+            }
+        }
+
+
+        /* =========================
+           BUBBLES
+        ========================== */
+
+        .bubble {
+            position: fixed;
+            bottom: -50px;
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+
+            backdrop-filter: blur(3px);
+
+            pointer-events: none;
+            z-index: 1;
+
+            animation: bubbleUp linear infinite;
+        }
+
+        .bubble:nth-child(1) {
+            width: 18px;
+            height: 18px;
+            left: 18%;
+            animation-duration: 12s;
+        }
+
+        .bubble:nth-child(2) {
+            width: 10px;
+            height: 10px;
+            left: 48%;
+            animation-duration: 9s;
+            animation-delay: 2s;
+        }
+
+        .bubble:nth-child(3) {
+            width: 25px;
+            height: 25px;
+            left: 75%;
+            animation-duration: 14s;
+            animation-delay: 4s;
+        }
+
+        @keyframes bubbleUp {
+            from {
+                transform: translateY(0);
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 0.6;
+            }
+
+            to {
+                transform: translateY(-110vh);
+                opacity: 0;
+            }
+        }
+
+
+        /* =========================
+           FALLING PETALS
+        ========================== */
+
+        .petal {
+            position: fixed;
+            top: -30px;
+
+            z-index: 2;
+
+            font-size: 14px;
+
+            opacity: 0.6;
+
+            pointer-events: none;
+
+            animation: fallPetal linear infinite;
+        }
+
+        .petal:nth-child(1) {
+            left: 8%;
+            animation-duration: 8s;
+        }
+
+        .petal:nth-child(2) {
+            left: 28%;
+            animation-duration: 10s;
+            animation-delay: 2s;
+        }
+
+        .petal:nth-child(3) {
+            left: 52%;
+            animation-duration: 9s;
+            animation-delay: 4s;
+        }
+
+        .petal:nth-child(4) {
+            left: 75%;
+            animation-duration: 11s;
+            animation-delay: 1s;
+        }
+
+        .petal:nth-child(5) {
+            left: 92%;
+            animation-duration: 8s;
+            animation-delay: 3s;
+        }
+
+        @keyframes fallPetal {
+            0% {
+                transform:
+                    translateY(-20px)
+                    rotate(0deg);
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 0.65;
+            }
+
+            50% {
+                transform:
+                    translateY(50vh)
+                    translateX(25px)
+                    rotate(160deg);
+            }
+
+            100% {
+                transform:
+                    translateY(110vh)
+                    translateX(-30px)
+                    rotate(320deg);
+                opacity: 0;
+            }
+        }
+
+
+        /* =========================
+           MAIN CONTENT
+        ========================== */
+
+        .page {
+            position: relative;
+            z-index: 5;
+
+            width: 100%;
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 32px 20px;
+        }
+
+        .content {
+            width: 100%;
+            max-width: 520px;
+
+            text-align: center;
+
+            padding: 34px 24px;
+
+            border: 1px solid rgba(255,255,255,0.12);
+
+            border-radius: 28px;
+
+            background:
+                rgba(255,255,255,0.07);
+
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+
+            box-shadow:
+                0 20px 70px rgba(0,0,0,0.35);
+
+            animation: appear 1.2s ease forwards;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform:
+                    translateY(25px)
+                    scale(0.97);
+            }
+
+            to {
+                opacity: 1;
+                transform:
+                    translateY(0)
+                    scale(1);
+            }
+        }
+
+
+        /* =========================
+           TOP DECORATION
+        ========================== */
+
+        .tiny-hearts {
+            font-size: 18px;
+            letter-spacing: 7px;
+            margin-bottom: 22px;
+
+            animation: softPulse 2.5s ease-in-out infinite;
+        }
+
+        @keyframes softPulse {
+            0%,
+            100% {
+                opacity: 0.55;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+
+        /* =========================
+           TEXT
+        ========================== */
+
+        .message {
+            font-size: 17px;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.93);
+        }
+
+        .message p {
+            margin-bottom: 18px;
+        }
+
+        .hello {
+            font-size: 27px;
+            font-weight: 700;
+
+            margin-bottom: 22px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #ffffff,
+                    #ffb7dc,
+                    #ffffff
+                );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            background-size: 200% auto;
+
+            animation: textShine 4s linear infinite;
+        }
+
+        @keyframes textShine {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        .wait {
+            font-size: 23px;
+            font-weight: 800;
+
+            margin: 22px 0 8px;
+
+            color: #ffd3ea;
+
+            letter-spacing: 1px;
+        }
+
+        .maybe {
+            font-style: italic;
+            color: rgba(255,255,255,0.72);
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================== */
+
+        .surprise-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 52px;
+
+            margin-top: 14px;
+
+            padding: 14px 25px;
+
+            border: none;
+            border-radius: 999px;
+
+            text-decoration: none;
+
+            font-size: 16px;
+            font-weight: 700;
+
+            color: #ffffff;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff4f9a,
+                    #9b5cff
+                );
+
+            box-shadow:
+                0 10px 30px rgba(255,79,154,0.28);
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .surprise-btn:active {
+            transform: scale(0.94);
+            box-shadow:
+                0 5px 18px rgba(255,79,154,0.2);
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            .surprise-btn:hover {
+                transform: translateY(-3px) scale(1.02);
+
+                box-shadow:
+                    0 14px 35px rgba(255,79,154,0.38);
+            }
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 480px) {
+
+            .page {
+                padding: 22px 14px;
+            }
+
+            .content {
+                padding: 30px 20px;
+
+                border-radius: 24px;
+            }
+
+            .hello {
+                font-size: 24px;
+            }
+
+            .message {
+                font-size: 16px;
+                line-height: 1.75;
+            }
+
+            .wait {
+                font-size: 21px;
+            }
+
+            .surprise-btn {
+                width: 100%;
+                font-size: 16px;
+            }
+        }
+
+
+        /* =========================
+           REDUCED MOTION
+        ========================== */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="stars"></div>
+
+    <div class="glow one"></div>
+    <div class="glow two"></div>
+    <div class="glow three"></div>
+
+    <!-- Floating Hearts -->
+    <span class="heart">❤️</span>
+    <span class="heart">💗</span>
+    <span class="heart">💕</span>
+    <span class="heart">💖</span>
+    <span class="heart">💗</span>
+
+    <!-- Bubbles -->
+    <span class="bubble"></span>
+    <span class="bubble"></span>
+    <span class="bubble"></span>
+
+    <!-- Falling Petals -->
+    <span class="petal">🌸</span>
+    <span class="petal">🌷</span>
+    <span class="petal">🌸</span>
+    <span class="petal">🌷</span>
+    <span class="petal">🌸</span>
+
+
+    <!-- PAGE CONTENT -->
+
+    <main class="page">
+
+        <section class="content">
+
+            <div class="tiny-hearts">
+                ♡ ✦ ♡
+            </div>
+
+            <div class="message">
+
+                <div class="hello">
+                    Heyyy meri Rooh.. 🫠❤️
+                </div>
+
+                <p>
+                    Yeah ik tu soch rhi hogi
+                    <strong>wtf is this cheez jo maine bana di</strong> 😂
+                </p>
+
+                <p>
+                    Bt don't worry...
+                    maine tere bday k liye kuch banaya h 😌
+                </p>
+
+                <div class="wait">
+                    BUT WAIT WAIT... 👀
+                </div>
+
+                <p>
+                    It's not that easy madam...
+                </p>
+
+                <p>
+                    Surprise chahiye toh thoda effort toh karna padega 😭
+                </p>
+
+                <p>
+                    So jaa next page pe...
+                </p>
+
+                <p class="maybe">
+                    maybe waha kuch acha mile... maybe 🤡
+                </p>
+
+                <a
+                    href="quiz.html"
+                    class="surprise-btn"
+                >
+                    👀 Click here for ur surprise
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
